@@ -17,7 +17,7 @@ class BloodPressureReadingFactory extends Factory
     {
         return [
             'patient_id'         => Patient::factory(),
-            'status'             => $this->faker->shuffleArray(BloodPressureReading::STATUSES)[0],
+            'status'             => 'normal',
             'systolic_pressure'  => $this->faker->numberBetween(100, 180),
             'diastolic_pressure' => $this->faker->numberBetween(70, 130),
             'measured_at'        => now(),

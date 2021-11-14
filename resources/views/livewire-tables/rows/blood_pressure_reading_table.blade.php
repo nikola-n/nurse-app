@@ -8,9 +8,7 @@
 
 <x-livewire-tables::table.cell>
     <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium leading-4 bg-{{ explode('-',$row->status_color)[0] }}-100 text-{{ $row->status_color }} capitalize">
-        @if($row->status)
-            {{ Arr::get(\App\Models\BloodPressureReading::STATUSES, $row->status, null) }}
-        @endif
+        {{ $row->status }}
     </span>
 </x-livewire-tables::table.cell>
 

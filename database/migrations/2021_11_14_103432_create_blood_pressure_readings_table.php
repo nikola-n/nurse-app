@@ -19,7 +19,7 @@ class CreateBloodPressureReadingsTable extends Migration
             $table->unsignedInteger('systolic_pressure');
             $table->unsignedInteger('diastolic_pressure');
             $table->string('status')->nullable();
-            $table->timestamp('measured_at');
+            $table->date('measured_at');
             $table->timestamps();
 
             $table->index('patient_id');
